@@ -21,7 +21,7 @@ export function generateKeyFromText(text: string, filepath?: string, reuseExisti
   // keygent
   const keygenStrategy = Config.keygenStrategy
   if (keygenStrategy === 'random') {
-    key = nanoid()
+    key = nanoid(4)
   }
   else if (keygenStrategy === 'empty') {
     key = ''
